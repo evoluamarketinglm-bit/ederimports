@@ -73,3 +73,115 @@ img{display:block;max-width:100%}
  .footer{min-height:98px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+
+/* EDER DARK EDITION — fundo preto, peças sem container opaco e proporção dos títulos */
+:root {
+  --ink: #f7f9ff;
+  --muted: #a6afba;
+  --bg: #000000;
+  --outline: #222a34;
+  --shadow: 0 8px 30px rgba(0, 0, 0, .28);
+  color-scheme: dark;
+}
+body {background: #000; color: #f7f9ff}
+
+/* Barra contínua: duas faixas idênticas mantêm o movimento perfeitamente em loop. */
+.announcement-bar {
+  height: 37px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #086dd9;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.announcement-track {
+  display: flex;
+  width: max-content;
+  flex: 0 0 auto;
+  align-items: center;
+  animation: announcement-scroll 27s linear infinite;
+  will-change: transform;
+}
+.announcement-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+  padding: 0 clamp(16px, 3vw, 44px);
+}
+.announcement-group span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1;
+}
+.announcement-group span::before {content: "•"; margin-right: 14px; color: #aad7ff}
+@keyframes announcement-scroll {to {transform: translateX(-50%)}}
+.announcement-bar:hover .announcement-track {animation-play-state: paused}
+
+/* Cabeçalho e menu pretos */
+.site-header {background: rgba(0, 0, 0, .97); border-bottom: 1px solid #202329}
+.nav-links a {color: #f3f5f8}
+.nav-links a:hover {color: #4aa5ff}
+.icon-button {border-color: #2b3541; background: #0d121a; color: #fff}
+.icon-button:hover {background: #172334; color: #fff}
+.header-whatsapp {color: #25d366; background: #101c16; border-color: #235c3a}
+.header-whatsapp:hover {background: #183c26; color: #36e77c}
+.header-whatsapp svg,
+.floating-whatsapp svg {stroke: none; fill: currentColor; width: 25px; height: 25px}
+.floating-whatsapp {background: #25d366; color: #fff; box-shadow: 0 7px 27px #000a, 0 2px 15px #25d36635}
+.floating-whatsapp svg {width: 34px; height: 34px}
+
+/* Banners exibidos diretamente sobre o preto, sem placa / moldura / background. */
+.section-banner {background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible}
+.section-banner img {background: transparent; border: 0; box-shadow: none; display: block}
+
+/* Bolinhas com legendas visíveis e ajustadas ao diâmetro. */
+.orbit-stage {height: 310px}
+.orbit-card {gap: 0; color: #f9faff}
+.orbit-card img {background: transparent; border-color: #303b48; box-shadow: 0 3px 18px #0008}
+.orbit-card.is-center img {border-color: var(--blue); box-shadow: 0 4px 23px #087bee38}
+.orbit-label {
+  display: block;
+  width: 100%;
+  padding: 0 3px;
+  margin-top: 11px;
+  line-height: 1.22;
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 800;
+  letter-spacing: .01em;
+  text-align: center;
+  white-space: nowrap;
+  color: #f2f5fa;
+}
+.orbit-arrow {border-color: #354052; background: #101722; box-shadow: 0 3px 14px #0008; color: #fff}
+.orbit-arrow:hover {background: var(--blue); border-color: var(--blue)}
+.tennis-card {background: #090e17; box-shadow: 0 8px 24px #0009}
+.tennis-dot {background: #49525e}
+.tennis-dot.active {background: var(--blue)}
+.footer {border-top-color: #1c2128}
+.toast {background: #142339; color: #fff; border: 1px solid #25446c}
+
+@media (max-width: 920px) {
+  .nav-links {position: absolute; top: 100%; background: #080b10; box-shadow: 10px 8px 30px #0009}
+  .nav-links a {border-bottom-color: #202833; color: #fff}
+  .menu-scrim:not([hidden]) {inset: 0}
+}
+@media (max-width: 540px) {
+  .announcement-bar {height: 35px}
+  .announcement-group {gap: 29px; padding: 0 15px}
+  .announcement-group span {font-size: 10px; letter-spacing: .085em}
+  .orbit-stage {height: 255px}
+  .orbit-label {font-size: clamp(12px, 3.6vw, 15px); margin-top: 9px; letter-spacing: -.01em}
+  .orbit-arrow {top: 47%}
+}
+@media (prefers-reduced-motion: reduce) {
+  .announcement-track {animation: none!important}
+  .announcement-bar {overflow-x: auto; scrollbar-width: none}
+  .announcement-bar::-webkit-scrollbar {display: none}
+}

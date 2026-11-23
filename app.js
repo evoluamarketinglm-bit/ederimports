@@ -89,7 +89,9 @@
       button.type = 'button';
       button.title = item.nome;
       button.setAttribute('aria-label', item.nome);
-      button.append(imageNode(item.imagem, item.nome));
+      const label = make('span', 'orbit-label');
+      label.textContent = item.nome;
+      button.append(imageNode(item.imagem, item.nome), label);
       stage.append(button);
       return button;
     });

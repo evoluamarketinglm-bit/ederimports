@@ -7,10 +7,19 @@ Site estático, responsivo e pronto para GitHub Pages ou Vercel.
 - Logo, menu e botão do WhatsApp (11) 97194-4729.
 - Banner de abertura 1080 x 1350, sem cortes.
 - 4 banners horizontais: Nike, Adidas, Puma, Outras Marcas.
-- 12 bolinhas de chuteiras (3 em cada seção), com seleção central, laterais escurecidas, setas e rotação infinita.
+- 12 bolinhas de chuteiras (3 em cada seção), com títulos proporcionais, seleção central, laterais escurecidas, setas e rotação infinita.
 - Título **CATÁLOGO DE TÊNIS** e 12 banners de tênis, com foco central, laterais desfocadas e autoplay.
-- Fundo branco, elementos em azul e preto, sem Instagram e sem textos promocionais extras.
+- Fundo preto e cabeçalho preto, elementos azuis, sem Instagram e sem textos promocionais extras.
 - Os 20 links de catálogo Google Fotos já conhecidos foram usados.
+
+## Ajustes visuais desta versão
+
+- Barra superior de anúncios com movimento lateral contínuo: **ENVIAMOS PARA TODO BRASIL**, **CLIQUE NA COLEÇÃO**, **ATENDIMENTO PELO WHATSAPP**.
+- Fundo da página e do cabeçalho pretos. Barra de anúncios azul e texto branco.
+- Contêineres dos banners das chuteiras totalmente transparentes (sem fundo branco/cinza aplicado pelo site). **Atenção:** um fundo que faça parte da própria imagem remota não pode ser removido apenas pelo CSS; nesse caso é necessário substituir o arquivo de imagem por um PNG/WebP transparente no ImageKit.
+- Nome de cada bolinha exibido logo abaixo dela, em tipografia adaptada para desktop/celular.
+- Ícones SVG do WhatsApp corrigidos no cabeçalho e no botão flutuante, ambos apontando para (11) 97194-4729.
+- URLs de imagem e links de catálogo mantidos.
 
 ## Como publicar
 
