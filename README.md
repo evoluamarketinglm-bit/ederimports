@@ -10,7 +10,7 @@ Site estático, responsivo e pronto para GitHub Pages ou Vercel.
 - 12 bolinhas de chuteiras (3 em cada seção), com títulos proporcionais, seleção central, laterais escurecidas, setas e rotação infinita.
 - Título **CATÁLOGO DE TÊNIS** e 12 banners de tênis, com foco central, laterais desfocadas e autoplay.
 - Fundo preto e cabeçalho preto, elementos azuis, sem Instagram e sem textos promocionais extras.
-- Os 20 links de catálogo Google Fotos já conhecidos foram usados.
+- Foram atualizados os catálogos de tênis de acordo com a lista enviada. O Tênis Mizuno permanece sem URL de destino.
 
 ## Ajustes visuais desta versão
 
@@ -41,7 +41,7 @@ Campos de catálogo que ainda não têm URL:
 - Adidas Futsal
 - Puma Futsal
 - New Balance (chuteiras)
-- Tênis Hoka
+- Tênis Mizuno
 
 Essas imagens aparecem normalmente, mas ao clicar nelas será exibida uma mensagem de indisponibilidade até que você preencha o campo `url` no `config.js`.
 
